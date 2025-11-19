@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  outline: 1px solid green;
+}
+:root {
+  /* Colors */
+  --green-500: hsl(171, 66%, 44%);
+  --blue-100: hsl(233, 100%, 69%);
+  --gray-700: hsl(210, 10%, 30%);
+  --gray-500: hsl(201, 11%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --ff-body: "Bai Jamjuree", sans-serif;
+  --fs-base: 18px;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  /* Spacings */
+  --spacing-md: 26px;
+
+  /* Border Radius */
+  --border-radius-lg: 24px;
+
+  /* Box shadows */
+  --shadow-subtle: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+}
+html {
+  font-family: var(--ff-body);
+  font-size: var(--fs-base);
+}
+.page-container {
+  max-width: 1440px;
+  margin: auto;
+  background-color: var(--white);
+}
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding-block: var(--spacing-md);
+}
+.container__header {
+  background-image: url("./assets/images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+.title {
+  font-weight: var(--fw-semibold);
+  color: var(--gray-700);
+}
+.text {
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--gray-500);
+  max-inline-size: 60ch;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-block: var(--spacing-md);
+}
+.button {
+  padding: 1em;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+  transition: 0.2s ease;
+}
+.button--green {
+  background-color: var(--green-500);
+}
+.button--blue {
+  background-color: var(--blue-100);
+}
+.button:hover,
+.button:focus-visible {
+  opacity: 0.8;
+}
+@media (min-width: 48rem) {
+  .container__header {
+    background-image: url("./assets/images/bg-header-desktop.png");
+  }
+  .buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
