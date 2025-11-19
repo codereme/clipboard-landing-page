@@ -47,7 +47,7 @@ html {
   padding-block: var(--spacing-md);
 }
 .container__header {
-  background-image: url("./assets/images/bg-header-mobile.png");
+  background-image: url("../assets/images/bg-header-mobile.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -79,6 +79,7 @@ html {
   padding: 1em;
   border: none;
   border-radius: var(--border-radius-lg);
+  font-family: var(--ff-body);
   color: var(--white);
   cursor: pointer;
   box-shadow: var(--shadow-subtle);
@@ -96,7 +97,7 @@ html {
 }
 @media (min-width: 48rem) {
   .container__header {
-    background-image: url("./assets/images/bg-header-desktop.png");
+    background-image: url("../assets/images/bg-header-desktop.png");
   }
   .buttons-container {
     flex-direction: row;
