@@ -5,30 +5,28 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* 
-* {
-  outline: 1px solid green;
-} */
 :root {
   /* Colors */
   --green-500: hsl(171, 66%, 44%);
   --blue-100: hsl(233, 100%, 69%);
   --gray-700: hsl(210, 10%, 30%);
   --gray-500: hsl(201, 11%, 60%);
+  --gray-400: hsl(201, 11%, 90%);
   --white: hsl(0, 0%, 100%);
 
   /* Fonts */
   --ff-body: "Bai Jamjuree", sans-serif;
   --fs-base: 18px;
   --fs-md: clamp(0.97rem, 0.47vw + 0.73rem, 1.11rem); /* 17.5px - 20px */
-  --fs-lg: clamp(1.55rem, 0.47vw + 0.73rem, 1.77rem); /* 28px - 32px */
+  --fs-lg: clamp(1.33rem, 0.47vw + 0.73rem, 1, 44rem); /* 24px - 26px */
   --fw-regular: 400;
   --fw-semibold: 600;
 
   /* Spacings */
-  --spacing-sm: 1rem;
+  --spacing-sm: 1rem; /* 18px */
   --spacing-md: 1.44rem; /* 26px */
   --spacing-xl: 2rem; /* 36px */
+  --spacing-xxl: 4rem; /* 72px */
 
   /* Border Radius */
   --border-radius-lg: 24px;
@@ -40,34 +38,40 @@ html {
   font-family: var(--ff-body);
   font-size: var(--fs-base);
 }
-/* General styles */
+/*******************
+  General Styles
+*******************/
 img {
   max-inline-size: 100%;
   block-size: auto;
 }
+
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-/* Typography */
+/*******************
+  Typography
+*******************/
 .title {
-  font-size: var(--fs-lg);
   font-weight: var(--fw-semibold);
   color: var(--gray-700);
 }
 .text {
-  font-size: var(--fs-md);
   font-weight: var(--fw-regular);
   line-height: 1.5;
   color: var(--gray-500);
   max-inline-size: 57ch;
 }
-
-/* Layout */
+.features-container .text {
+  margin-block-start: var(--spacing-sm);
+}
+/*******************
+  Layout
+*******************/
 .page-container {
-  max-width: 1440px;
   margin: auto;
 
   background-image: url("../assets/images/bg-header-mobile.png");
@@ -75,23 +79,37 @@ a {
   background-size: contain;
   background-position: top center;
 }
-
 .container {
   width: 90%;
+  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
-  padding-block: var(--spacing-md);
 }
 .col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-xl);
-  text-align: center;
-  padding-block: var(--spacing-md);
+  gap: var(--spacing-md);
   height: 100%;
+  padding-block: var(--spacing-xl);
+  text-align: center;
 }
-/* Buttons */
+.clients .col {
+  gap: var(--spacing-xxl);
+}
+.download .col {
+  padding-block: var(--spacing-xxl);
+}
+.icon-container {
+  width: 3rem;
+  height: 3rem;
+}
+.footer {
+  background-color: var(--gray-400);
+}
+/*******************
+  Buttons
+*******************/
 .button {
   padding: 1em 2em;
   margin-block-end: var(--spacing-sm);
@@ -117,15 +135,24 @@ a {
 .button:focus-visible {
   opacity: 0.8;
 }
-/* Navigation */
+/*******************
+  Navigation 
+*******************/
 .menu {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+}
+.menu-item {
+  margin-block-end: var(--spacing-sm);
 }
 .menu-link {
   font-family: var(--ff-body);
   color: var(--gray-700);
+  transition: 0.2s ease;
+}
+.menu-link:hover,
+.menu-link:focus-visible {
+  color: var(--green-500);
 }
 .social-list {
   display: flex;
@@ -136,27 +163,79 @@ a {
   width: 2.5rem;
   height: 2.5rem;
   color: var(--gray-700);
+  transition: 0.2s ease;
 }
 .social-icon {
   width: 1.5rem;
   height: 1.5rem;
   color: var(--gray-700);
+  transition: 0.2s ease;
+}
+.social-link:hover .social-icon,
+.social-link:focus-visible .social-icon {
+  color: var(--green-500);
 }
 /* Media Queries */
 @media (min-width: 48rem) {
+  /*******************
+    Layout 
+  *******************/
   .page-container {
     background-image: url("../assets/images/bg-header-desktop.png");
   }
   .row {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-md);
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding-block: var(--spacing-xl);
+  }
+  .clients .row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /*******************************
+   Features and workflow sections
+  ********************************/
+  .snippets-img-container {
+    transform: translateX(-20%);
+  }
+  .features-items {
+    align-items: flex-start;
+    padding-block-start: var(--spacing-xxl);
+    text-align: left;
+  }
+  .features-container .text,
+  .tools-container .text {
+    max-inline-size: 33ch;
+  }
+
+  /*******************
+    Navigation 
+  *******************/
+  .footer img {
+    padding-block-start: var(--spacing-xxl);
+  }
+  .nav {
+    width: 80%;
+  }
+  .menu {
+    gap: var(--spacing-xl);
+  }
+  .menu-item {
+    text-align: left;
+    margin-block-end: var(--spacing-sm);
+  }
+  .social-list {
+    align-self: center;
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .button {
+  .button,
+  .menu-link,
+  .social-link,
+  .social-icon {
     transition-duration: 0.01ms;
   }
 }
