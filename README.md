@@ -16,9 +16,9 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 
-## Screenshots
+## Screenshot
 
-<img src="./assets/screenshots/desktop-screenshot.png" alt="Desktop screenshot" width="500">
+![Desktop screenshot](./assets/screenshots/desktop-screenshot.png)
 
 ## Links
 
