@@ -220,10 +220,9 @@ a {
     width: 80%;
   }
   .menu {
-    gap: var(--spacing-xl);
-  }
-  .nav .row {
-    align-items: flex-start;
+    display: block;
+    column-count: 3;
+    column-gap: var(--spacing-md);
   }
   .menu-item {
     text-align: left;
