@@ -22,7 +22,7 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/clipboard-landing-page](https://www.frontendmentor.io/solutions/clipboard-landing-page)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-zsFMcqbeeX](https://www.frontendmentor.io/solutions/responsive-landing-page-using-flexbox-zsFMcqbeeX)
 - Live Site URL: [https://codereme.github.io/clipboard-landing-page](https://codereme.github.io/clipboard-landing-page)
 
 ## Author
