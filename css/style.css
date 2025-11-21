@@ -186,14 +186,17 @@ a {
   .row {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: var(--spacing-md);
     padding-block: var(--spacing-xl);
   }
+  .workflow .row {
+    align-items: flex-start;
+  }
   .clients .row {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
   /*******************************
    Features and workflow sections
@@ -203,10 +206,9 @@ a {
   }
   .features-items {
     align-items: flex-start;
-    padding-block-start: var(--spacing-xxl);
     text-align: left;
   }
-  .features-container .text,
+  .features-items .text,
   .tools-container .text {
     max-inline-size: 33ch;
   }
@@ -214,14 +216,14 @@ a {
   /*******************
     Navigation 
   *******************/
-  .footer img {
-    padding-block-start: var(--spacing-xxl);
-  }
   .nav {
     width: 80%;
   }
   .menu {
     gap: var(--spacing-xl);
+  }
+  .nav .row {
+    align-items: flex-start;
   }
   .menu-item {
     text-align: left;

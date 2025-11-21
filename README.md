@@ -8,3 +8,24 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
+
+## Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+
+## Screenshots
+
+<img src="./assets/screenshots/desktop-screenshot.png" alt="Desktop screenshot" width="500">
+
+## Links
+
+- Solution URL: [https://www.frontendmentor.io/solutions/clipboard-landing-page](https://www.frontendmentor.io/solutions/clipboard-landing-page)
+- Live Site URL: [https://codereme.github.io/clipboard-landing-page](https://codereme.github.io/clipboard-landing-page)
+
+## Author
+
+- Frontend Mentor - [@codereme](https://www.frontendmentor.io/profile/codereme)
+- Github - [@codereme](https://github.com/codereme)
